@@ -1,0 +1,125 @@
+{
+    "crawl": {
+        "enable": true,
+        "exclude": "",
+        "github": {
+            "enable": true,
+            "exclude": "",
+            "exclude_repos": [],
+            "pages": 2,
+            "push_to": [
+                "backup"
+            ]
+        },
+        "google": {
+            "days": 7,
+            "enable": true,
+            "exclude": "",
+            "exclude_sites": [],
+            "limit": 100,
+            "push_to": [
+                "backup"
+            ]
+        },
+        "include_nodes": true,
+        "max_fails": 5,
+        "pages": [],
+        "persist": {
+            "nodes": "crawledproxies",
+            "subscribe": "crawledsubs"
+        },
+        "scripts": [
+            {
+                "config": {
+                    "push_to": [
+                        "backup"
+                    ]
+                },
+                "enable": true,
+                "persist": "",
+                "plugin": "dynamic",
+                "repositories": [],
+                "task": {
+                    "check_alive": true,
+                    "enable": true,
+                    "push_to": [
+                        "backup"
+                    ]
+                }
+            }
+        ],
+        "task": {
+            "push_to": [
+                "backup"
+            ]
+        },
+        "telegram": {
+            "channels": {},
+            "enable": true,
+            "exclude": "",
+            "pages": 3
+        },
+        "twitter": {
+            "enable": true,
+            "users": {}
+        },
+        "yandex": {
+            "days": 3,
+            "enable": true,
+            "exclude": "",
+            "exclude_sites": [],
+            "pages": 5,
+            "push_to": [
+                "backup"
+            ]
+        }
+    },
+    "groups": {
+        "backup": {
+            "emoji": true,
+            "list_only": true,
+            "regularize": {
+                "digits": 2,
+                "enable": false,
+                "locate": true,
+                "residential": true
+            },
+            "targets": {
+                "clash": "backup-clash",
+                "singbox": "backup-singbox",
+                "v2ray": "backup-v2ray"
+            }
+        }
+    },
+    "sites": [],
+    "storage": {
+        "engine": "gist",
+        "items": {
+            "backup-clash": {
+                "filename": "backup-clash.yaml",
+                "gist_id": "TODO_REPLACE_WITH_REAL_GIST_ID",
+                "username": "wojia998"
+            },
+            "backup-singbox": {
+                "filename": "backup-singbox.json",
+                "gist_id": "TODO_REPLACE_WITH_REAL_GIST_ID",
+                "username": "wojia998"
+            },
+            "backup-v2ray": {
+                "filename": "backup-v2ray.txt",
+                "gist_id": "TODO_REPLACE_WITH_REAL_GIST_ID",
+                "username": "wojia998"
+            },
+            "crawledproxies": {
+                "filename": "crawledproxies.txt",
+                "gist_id": "TODO_REPLACE_WITH_REAL_GIST_ID",
+                "username": "wojia998"
+            },
+            "crawledsubs": {
+                "filename": "crawledsubs.json",
+                "gist_id": "TODO_REPLACE_WITH_REAL_GIST_ID",
+                "username": "wojia998"
+            }
+        }
+    }
+}
